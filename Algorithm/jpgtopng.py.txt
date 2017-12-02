@@ -1,0 +1,12 @@
+import Image
+
+pathnametest ='C:\\Users\\UST\\Desktop\\dataset\\test'
+pathnametrain ='C:\\Users\\UST\Desktop\\dataset\\train'
+for i in range(0,25):
+	testPath=os.path.join(os.path.abspath(pathnametest),('%d.png' % i))
+	im = Image.open(testPath)
+	im.save('%d.png' % i)
+for i in range(0,80):
+	trainPath = os.path.join(os.path.abspath(pathnametrain),('%d.png' % i))
+	im = Image.open(trainPath)
+	im.save('%d.png' % i)

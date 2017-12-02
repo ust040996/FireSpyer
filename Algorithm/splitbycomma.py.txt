@@ -1,0 +1,8 @@
+with open('test_map.txt', 'r') as file1:
+    with open('C:\\Users\\UST\\Desktop\\killer\\rgbdiff0.txt', 'r') as file2:
+        same = (file1)-(file2)
+        same = same - str("|")
+
+with open('C:\\Users\\UST\\Desktop\\rgbdiff0.txt', 'w') as file_out:
+    for line in same:
+        file_out.write(line)

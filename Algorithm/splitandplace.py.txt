@@ -1,0 +1,24 @@
+import os
+def file(f):
+    for line in f:
+        yield line.split('|')[1]
+
+def deleteContent(fname):
+    with open(fname, "w"):
+         pass
+
+for y in range(0,100):
+    with open("C:\\Users\\UST\\Desktop\\dataust\\rgbdiff_data\\rgbdiff%d.txt" %(y),"rt") as f:
+         if not os.path.exists("C:\\Users\\UST\\Desktop\\killer"):
+            os.makedirs("C:\\Users\\UST\\Desktop\\killer")
+         arr = []
+         for x in file(f):
+             arr.append(x)
+         for i in range(0,10):
+             print(arr[i])
+         deleteContent('C:\\Users\\UST\\Desktop\\killer\\rgbdiff%d.txt' %(y))
+         with open('C:\\Users\\UST\\Desktop\\killer\\rgbdiff%d.txt' %(y),'a+') as mapper_rgb:
+              for j in range(0,10):
+                  mapper_rgb.write("%s\n" %(arr[j]))
+ 
+             
